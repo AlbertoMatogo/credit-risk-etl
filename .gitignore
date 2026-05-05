@@ -1,0 +1,12 @@
+# Virtual environment
+venv/
+
+# IntelliJ
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Generated data
+data/raw/*.csv
