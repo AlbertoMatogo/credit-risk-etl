@@ -1,7 +1,7 @@
 name: First Workflow
 on: workflow_dispatch
 jobs:
-  first-job:
+  build-job:
     runs-on: ubuntu-latest
     steps:
       - name: Print greeting
