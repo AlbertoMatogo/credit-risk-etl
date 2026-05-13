@@ -1,10 +1,10 @@
-name: Test
+name: First Workflow
 on: workflow_dispatch
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Print greeting
-      run: echo "Testing github actions"
-    - name: Print goodbye
-      run: echo "Done -bye"
-    
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
