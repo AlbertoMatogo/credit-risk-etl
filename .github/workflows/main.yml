@@ -1,0 +1,10 @@
+name: Test
+on: workflow_dispatch
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Print greeting
+      run: echo "Testing github actions"
+    - name: Print goodbye
+      run: echo "Done -bye"
+    
