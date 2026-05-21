@@ -298,10 +298,7 @@ def generate_customer():
 # GENERACIÓN DEL CSV
 # ==========================================================
 
-def generate_customers_csv(
-        number_of_customers,
-        output_path
-):
+def generate_customers_csv(number_of_customers,output_path ):
     """
     Genera un fichero CSV con clientes ficticios.
 
