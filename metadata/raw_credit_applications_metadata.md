@@ -1,0 +1,48 @@
+# RAW Credit Applications Metadata
+
+## Descripción
+
+Dataset RAW que contiene solicitudes de crédito simuladas
+para procesos ETL orientados a análisis de riesgo bancario.
+
+---
+
+## Columnas
+
+| Column Name | Data Type | Description |
+|---|---|---|
+| application_id | STRING | Unique credit application identifier |
+| customer_id | STRING | Unique customer identifier |
+| first_name | STRING | Customer first name |
+| last_name | STRING | Customer last name |
+| gender | STRING | Customer gender |
+| date_of_birth | DATE | Customer birth date |
+| email | STRING | Customer email address |
+| phone_number | STRING | Customer phone number |
+| country | STRING | Customer country |
+| city | STRING | Customer city |
+| employment_status | STRING | Employment status |
+| job_title | STRING | Customer profession |
+| years_in_current_job | INTEGER | Years in current job |
+| annual_income | INTEGER | Annual gross income |
+| monthly_expenses | INTEGER | Estimated monthly expenses |
+| existing_debt | INTEGER | Existing debt amount |
+| credit_score | INTEGER | Credit score |
+| bank_balance | INTEGER | Current bank account balance |
+| loan_amount_requested | INTEGER | Requested loan amount |
+| loan_purpose | STRING | Purpose of the loan |
+| loan_term_months | INTEGER | Loan duration in months |
+| debt_to_income_ratio | FLOAT | Debt to income ratio |
+| risk_category | STRING | Calculated risk category |
+| marital_status | STRING | Marital status |
+| housing_status | STRING | Housing situation |
+| number_of_dependents | INTEGER | Number of dependents |
+| application_date | DATE | Loan application date |
+| record_creation_timestamp | TIMESTAMP | Record creation timestamp |
+
+---
+
+## Notas
+- Dataset generado artificialmente mediante Python + Faker
+- Utilizado como capa RAW del proyecto ETL
+- Simula solicitudes de crédito bancarias

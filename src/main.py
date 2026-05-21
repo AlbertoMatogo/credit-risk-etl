@@ -12,9 +12,18 @@ para un proceso ETL bancario.
 
 # Importamos la función encargada de generar
 # el fichero CSV con clientes ficticios
-from generators.customer_generator import (
-    generate_customers_csv
+from generators.customer_generator import (generate_customers_csv)
+from datetime import datetime
+import logging
+
+# ==========================================================
+# CONFIGURACIÓN LOGGING
+# ==========================================================
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
 )
+
 
 # ==========================================================
 # CONFIGURACIÓN GLOBAL
@@ -23,9 +32,12 @@ from generators.customer_generator import (
 # Número de clientes que queremos generar
 NUMBER_OF_CUSTOMERS = 1000
 
+# Hora de ejecución
+FECHA_EJECUCION = datetime.now().strftime('%Y-%m-%d')
+
 # Ruta donde se almacenará el CSV RAW
 OUTPUT_PATH = (
-    "../data/raw/raw_credit_applications.csv"
+    f"./data/raw/raw_credit_applications_{FECHA_EJECUCION}.csv"
 )
 
 
@@ -40,14 +52,14 @@ def main():
     Lanza el proceso de generación del CSV.
     """
 
-    print("Iniciando generación de clientes...")
+    logging.info("Iniciando generación de clientes...")
 
     generate_customers_csv(
         number_of_customers=NUMBER_OF_CUSTOMERS,
         output_path=OUTPUT_PATH
     )
 
-    print("Proceso finalizado correctamente.")
+    logging.info("Proceso finalizado correctamente.")
 
 
 # ==========================================================
